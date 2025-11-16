@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Megharaj C - Futuristic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      /* Simple scrollbar styling for a more modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a1a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #4f46e5;
+        border-radius: 10px;
+        border: 2px solid #0a0a1a;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'brand-primary': '#4f46e5', // Indigo
+              'brand-secondary': '#0ea5e9', // Sky Blue
+              'brand-accent': '#ec4899', // Pink
+              'dark-bg': '#0a0a1a',
+              'dark-card': '#111122',
+            },
+            animation: {
+              'text-reveal': 'text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+              'scroll-carousel': 'scroll-carousel 40s linear infinite',
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+            },
+            keyframes: {
+              'text-reveal': {
+                '0%': { transform: 'translateY(100%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { boxShadow: '0 0 20px #4f46e5, 0 0 30px #4f46e5' },
+                '50%': { boxShadow: '0 0 40px #0ea5e9, 0 0 60px #0ea5e9' },
+              },
+              'scroll-carousel': {
+                'from': { transform: 'translateX(0)' },
+                'to': { transform: 'translateX(-100%)' },
+              },
+              'fade-in-up': {
+                'from': { opacity: '0', transform: 'translateY(10px)' },
+                'to': { opacity: '1', transform: 'translateY(0)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-dark-bg text-gray-200 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
